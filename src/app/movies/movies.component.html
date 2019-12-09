@@ -1,14 +1,18 @@
-<div class="card" style="width: 50%; display: inline-block">
+<div *ngFor = "let movie of movies">
+  <div class="card" style="width: 50%; display: inline-block">
     <div class="card-header">
-      <h3>Movie 1</h3>
+      <h3>{{movie.original_title}}</h3>
     </div>
     <div class="card-body">
       <div class="container-fluid">
         <div class="text-center">
-          <img src="./assets/images/logo.jpg"
+          <img src="https://image.tmdb.org/t/p/w500/" + movie.backdrop_path
                class="img-responsive center-block"
                style="max-height:300px;padding-bottom:50px" />
+               <p>{{movie.release_date}}</p>
+          <p>{{movie.overview}}</p>
         </div>
       </div>
     </div>
   </div>
+</div>
