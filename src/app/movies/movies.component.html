@@ -1,3 +1,4 @@
+<h2>Movies:</h2>
 <div *ngFor="let movie of movies.results">
   <div class="card" style="width: 50%; display: inline-block">
     <div class="card-header">
@@ -9,7 +10,7 @@
           <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path"
                class="img-responsive center-block"
                style="max-height:300px;padding-bottom:50px" />
-               <p>{{movie.release_date}}</p>
+               <p>Released: {{movie.release_date}}</p>
           <p>{{movie.overview}}</p>
         </div>
       </div>
