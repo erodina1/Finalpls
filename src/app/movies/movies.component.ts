@@ -9,10 +9,14 @@ import { MovieService } from './movies.service'
 export class MovieListComponent{
     pageTitle: 'Movies';
     movies: IMovie[] = [];
-    constructor(private MovieService: MovieService){
-        //this.movies = this.MovieService.getMovies();
+    constructor(private MovieService: MovieService){}
+    ngOnInit():void{
+        this.movies = this.GetMovies();
+    }
+
+    GetMovies():any{
         this.MovieService.getMovies().subscribe(movieObserved => {
-            this.movies = movieObserved
-        })
+            this.movies = movieObserved})
+    
     }
 }

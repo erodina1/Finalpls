@@ -3,6 +3,13 @@
   <h1>
     Welcome to {{title}}!!
   </h1>
-  <pm-movies></pm-movies>
-  <pm-shows></pm-shows>
+  <nav class="navbar navbar-light">
+    <a class="navbar-brand"></a>
+    <ul class="nav nav-pills">
+      <li><a class="navbar-brand" [routerLink]="['/home']" class="nav-link">Home</a></li>
+      <li><a class="navbar-brand" [routerLink]="['/movies']" class="nav-link">Movies</a></li>
+      <li><a class="navbar-brand" [routerLink]="['/tvShows']" class="nav-link">TV Shows</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
 </div>
