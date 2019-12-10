@@ -2,7 +2,7 @@
 cards. The navbar itself is only coded once in app.component.html-->
 <div style="display: inline-block;">
     <div *ngFor="let movie of movies.results"><a [routerLink]="['/movies']">
-        <div *ngIf='movie === movies.results[0]' class="card" style="width: 45%; display: inline-block; color: black; float: left; margin-left: 3%;">
+        <div *ngIf='movie === movies.results[0]' class="card" style="width: 45%; color: black; float: left; margin-left: 3%;">
             <div class="card-header">
             <h3>Current Movie: {{movie.original_title}}</h3>
             </div>
